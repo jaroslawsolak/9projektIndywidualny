@@ -614,6 +614,10 @@ body.layout .content {
   font-family: 'Raleway';
   line-height: 2.5;
   /* content-topbar */
+  /*
+    .content-panels {
+      overflow: auto;
+    } */
 }
 
 body.layout .content .content-topbar {
@@ -628,7 +632,6 @@ body.layout .content .content-topbar ul {
 
 body.layout .content .content-topbar ul li {
   display: inline;
-  float: right;
   padding: 10px 0;
   border-left: solid 1px;
   border-left-color: lightgrey;
@@ -671,10 +674,6 @@ body.layout .content .content-topbar ul li:hover {
   color: white;
 }
 
-body.layout .content .content-panels {
-  overflow: auto;
-}
-
 body.layout .content .panel {
   margin: 20px;
   background-color: white;
@@ -695,31 +694,36 @@ body.layout .content .panel .panel-title h4 {
 body.layout .content .panel .panel-details-wrap {
   border-bottom: solid 3px;
   border-bottom-color: grey;
-  display: inline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 body.layout .content .panel .panel-details-wrap .panel-details {
   color: grey;
-  border-bottom: solid 1px;
-  border-bottom-color: lightgrey;
   color: grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range {
   color: grey;
   text-align: center;
   margin: 20px;
-  display: inline-block;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .dates-in-frame {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .dates-in-frame .date-from-to {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   border: solid 1px;
   border-color: lightgrey;
   border-radius: 5px;
@@ -728,7 +732,8 @@ body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range
 }
 
 body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .dates-in-frame .date-from-to h5 {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   padding: 5px 0;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -743,7 +748,8 @@ body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range
 }
 
 body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .dates-in-frame .date-from-to input {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
   padding: 10px 30px;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -756,6 +762,11 @@ body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range
   border-left-color: lightgrey;
 }
 
+body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .dates-in-frame .date-from-to button {
+  background-color: white;
+  border: none;
+}
+
 body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .dates-in-frame .date-from-to i {
   margin-right: 10px;
 }
@@ -766,20 +777,25 @@ body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range
 
 body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .button-icon-refresh {
   float: right;
-  border-radius: 5px;
-  background: orange;
-  padding: 8px 18px 3px;
-  color: white;
-  margin: 0 10px;
 }
 
-body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .button-icon-refresh:hover {
+body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .button-icon-refresh .btn {
+  float: right;
+  border-radius: 5px;
+  border: none;
+  background: orange;
+  padding: 17px 18px 13px;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+body.layout .content .panel .panel-details-wrap .panel-details .panel-date-range .button-icon-refresh .btn:hover {
   background: grey;
   color: black;
 }
 
 body.layout .content .panel .panel-statistics {
-  display: inline-block;
   color: pink;
   height: 100px;
   margin: 0;
@@ -788,7 +804,6 @@ body.layout .content .panel .panel-statistics {
 }
 
 body.layout .content .panel .panel-statistics .statistics-wrap {
-  display: inline-block;
   float: left;
   margin: 0;
   color: pink;
@@ -1002,7 +1017,6 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
     left: 0;
     width: 100%;
     max-height: 100%;
-    overflow: auto;
   }
   .sidebar .content {
     display: none;
@@ -1022,7 +1036,7 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
     margin-top: 60px;
   }
   .container-fluid {
-    width: 100%;
+    width: auto;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 15px;
@@ -1040,6 +1054,7 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
   }
   .container-fluid .panel-chart {
     max-width: 650px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 0 0 0;
   }
@@ -1048,6 +1063,7 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
   }
   .flexible-table {
     max-width: 650px;
+    width: 100%;
   }
   .flexible-table .element {
     width: 100%;
@@ -1144,7 +1160,6 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
   }
   .sidebar {
     width: 200px;
-    overflow: auto;
   }
   .content::-webkit-scrollbar {
     display: none;
@@ -1153,7 +1168,7 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
     display: block;
   }
   .container {
-    width: 100%;
+    width: auto;
     max-width: 767px;
     margin: 0 auto;
     padding-left: 15px;
@@ -1173,6 +1188,7 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
   }
   .container .panel-chart {
     max-width: 767px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px 0 0 0;
   }
@@ -1181,6 +1197,7 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
   }
   .flexible-table {
     max-width: 1170px;
+    width: 100%;
   }
   .flexible-table .element {
     width: 100%;
@@ -1277,7 +1294,6 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
   }
   .sidebar {
     width: 200px;
-    overflow: auto;
   }
   .content::-webkit-scrollbar {
     display: none;
@@ -1286,7 +1302,7 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
     display: block;
   }
   .container {
-    width: 100%;
+    width: auto;
     max-width: 1170px;
     margin: 0 auto;
     padding-left: 15px;
@@ -1313,6 +1329,7 @@ body.layout .content .panel .flexible-table .element-wide .object-to-display i {
   }
   .flexible-table {
     max-width: 1170px;
+    width: 100%;
     margin: 0 auto;
   }
   .flexible-table .element {

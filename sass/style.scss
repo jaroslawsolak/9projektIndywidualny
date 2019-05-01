@@ -174,7 +174,8 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: 'Raleway'
+  font-family: 'Raleway';
+  
 }
 
 .row::before,
@@ -196,6 +197,7 @@ body {
 body.layout {
   height: 100%;
   background-color: $lightgrey;
+  
 
   /* sidebar */
   .sidebar {
@@ -318,7 +320,7 @@ body.layout {
 
         li {
           display: inline;
-          float: right;
+          //float: right;
           padding: 10px 0;
           border-left: solid 1px;
           border-left-color: $color-lightgrey;
@@ -373,10 +375,10 @@ body.layout {
         }
       }
     }
-
+/*
     .content-panels {
       overflow: auto;
-    }
+    } */
 
     .panel {
       margin: 20px;
@@ -396,27 +398,38 @@ body.layout {
       .panel-details-wrap {
         border-bottom: solid 3px;
         border-bottom-color: $color-grey;
-        display: inline;
+        //display: inline;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         .panel-details {
           color: $color-grey;
-          border-bottom: solid 1px;
-          border-bottom-color: $color-lightgrey;
+          //border-bottom: solid 1px;
+          //border-bottom-color: $color-lightgrey;
           color: $color-grey;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
 
           .panel-date-range {
             color: $color-grey;
             text-align: center;
             margin: 20px;
-            display: inline-block;
+            //display: inline-block;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
 
             .dates-in-frame {
-              display: inline-block;
+              //display: inline-block;
+              display: flex;
+              flex-wrap: wrap;
 
               .date-from-to {
-                display: inline-block;
+                display: flex;
+                flex-wrap: wrap;
+                //display: inline-block;
                 border: solid 1px;
                 border-color: $color-lightgrey;
                 border-radius: 5px;
@@ -424,7 +437,9 @@ body.layout {
                 margin: 0 10px;
 
                 h5 {
-                  display: inline-block;
+                  display: flex;
+                  flex-wrap: wrap;
+                  //display: inline-block;
                   padding: 5px 0;
                   font-family: Arial, Helvetica, sans-serif;
                   margin: 0;
@@ -439,7 +454,9 @@ body.layout {
                 }
 
                 input {
-                  display: inline-block;
+                  display: flex;
+                  flex-wrap: wrap;
+                  //display: inline-block;
                   padding: 10px 30px;
                   font-family: Arial, Helvetica, sans-serif;
                   margin: 0;
@@ -450,6 +467,11 @@ body.layout {
                     border-left: solid 1px;
                     border-left-color: $color-lightgrey;
                   }
+                }
+
+                button{
+                  background-color: $color-white;
+                  border: none;
                 }
 
                 i {
@@ -464,23 +486,36 @@ body.layout {
 
             .button-icon-refresh {
               float: right;
-              border-radius: 5px;
-              background: $color-orange;
-              padding: 8px 18px 3px;
-              color: $color-white;
-              margin: 0 10px;
+              //border-radius: 5px;
+              //background: $color-orange;
+              //padding: 8px 18px 3px;
+              //color: $color-white;
+              //margin: 0 10px;
 
-              &:hover {
-                background: $color-grey;
-                color: $color-black;
+              .btn {
+                float: right;
+                border-radius: 5px;
+                border: none;
+                background: $color-orange;
+                padding: 17px 18px 13px;
+                color: $color-white;
+                margin: 0 10px;
+                cursor: pointer;
+              
+                &:hover {
+                  background: $color-grey;
+                  color: $color-black;
+                }
               }
+
+              
             }
           }
         }
       }
 
       .panel-statistics {
-        display: inline-block;
+        //display: inline-block;
         color: pink;
         height: 100px;
         margin: 0;
@@ -488,7 +523,7 @@ body.layout {
         width: 100%;
 
         .statistics-wrap {
-          display: inline-block;
+          //display: inline-block;
           float: left;
           margin: 0;
           color: pink;
@@ -643,6 +678,7 @@ body.layout {
 
   body.layout {
     display: flex;
+    //overflow: hidden;
   }
 
   .sidebar {
@@ -651,7 +687,7 @@ body.layout {
     left: 0;
     width: 100%;
     max-height: 100%;
-    overflow: auto;
+    //overflow: auto;
 
     .content {
       display: none;
@@ -679,7 +715,7 @@ body.layout {
   }
 
   .container-fluid {
-    width: 100%;
+    width: auto;
     padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 15px;
@@ -699,6 +735,7 @@ body.layout {
 
     .panel-chart {
       max-width: 650px;
+      width: 100%;
       margin: 0 auto;
       padding: 20px 0 0 0;
 
@@ -710,6 +747,7 @@ body.layout {
 
   .flexible-table {
     max-width: 650px;
+    width: 100%;
 
     .element {
       width: 100%;
@@ -725,6 +763,7 @@ body.layout {
   html,
   body {
     height: 100%;
+    //overflow: hidden;
   }
 
   .layout {
@@ -741,7 +780,7 @@ body.layout {
 
   .sidebar {
     width: 200px;
-    overflow: auto;
+    //overflow: auto;
   }
 
   .content::-webkit-scrollbar {
@@ -753,7 +792,7 @@ body.layout {
   }
 
   .container {
-    width: 100%;
+    width: auto;
     max-width: 767px;
     margin: 0 auto;
     padding-left: 15px;
@@ -775,6 +814,7 @@ body.layout {
 
     .panel-chart {
       max-width: 767px;
+      width: 100%;
       margin: 0 auto;
       padding: 20px 0 0 0;
 
@@ -786,6 +826,7 @@ body.layout {
 
   .flexible-table {
     max-width: 1170px;
+    width:100%;
 
     .element {
       width: 100%;
@@ -801,6 +842,7 @@ body.layout {
   html,
   body {
     height: 100%;
+    //overflow: hidden; 
   }
 
   .layout {
@@ -817,7 +859,7 @@ body.layout {
 
   .sidebar {
     width: 200px;
-    overflow: auto;
+    //overflow: auto;
   }
 
   .content::-webkit-scrollbar {
@@ -829,7 +871,7 @@ body.layout {
   }
 
   .container {
-    width: 100%;
+    width: auto;
     max-width: 1170px;
     margin: 0 auto;
     padding-left: 15px;
@@ -850,8 +892,13 @@ body.layout {
 
     .panel-chart {
       max-width: 1170px;
+      //max-width: auto;
+      //width: calc(100% - 200px);
+      //position: relative;
+      //width: auto;
       margin: 0 auto;
       padding: 20px 0 0 0;
+      //position: relative;
 
       h5 {
         color: $color-grey;
@@ -861,6 +908,7 @@ body.layout {
 
   .flexible-table {
     max-width: 1170px;
+    width: 100%;
     margin: 0 auto;
 
     .element {

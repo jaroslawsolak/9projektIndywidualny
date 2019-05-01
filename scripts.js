@@ -41,6 +41,7 @@ var chart = new Chart(ctx, {
     },
 });
 
+/*
 $(window).on('load resize', function () {
     if ($(this).width() < 640) {
       $('table tfoot').hide();
@@ -48,3 +49,4 @@ $(window).on('load resize', function () {
       $('table tfoot').show();
     }  
   });
+  */

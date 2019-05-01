@@ -19,7 +19,7 @@
     "watch:sassprefixer-sass": "node-sass --watch --output-style expanded --source-map true -o css sass",
     "watch:sassprefixer-autoprefixer": "onchange -d 100 css/style.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css",
     "watch:browsersync": "browser-sync start --server --files css/*.css *.html",
-    "build:copy": "copyfiles - u 1 ../css/* ../Index.html ../scripts.js"
+    "build:copy": "copyfiles - u 1 ../css/**/* ../Index.html ../scripts.js"
   },
   "repository": {
     "type": "git",
