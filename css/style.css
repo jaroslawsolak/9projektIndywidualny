@@ -632,6 +632,7 @@ body.layout .content .content-topbar ul {
 
 body.layout .content .content-topbar ul li {
   display: inline;
+  float: right;
   padding: 10px 0;
   border-left: solid 1px;
   border-left-color: lightgrey;
